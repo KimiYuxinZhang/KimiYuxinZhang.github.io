@@ -49,9 +49,72 @@ body{
 .navbar a:hover,
 .navbar a.active{
     color: var(--main-color);
-    border-bottom: 3px solid var(--main-color) ;
+    border-bottom: 3px solid var(--main-color);
+}
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Button (Styled Like Navbar Links) */
+.dropbtn {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 3rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
+/* Hover Effect for Dropbtn (Same as .navbar a:hover) */
+.dropbtn:hover,
+.dropdown:hover .dropbtn {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+/* Show Underline on Hover */
+.dropdown-content a:hover::after {
+    opacity: 1;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/**********/
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
 section{
     min-height: 100vh;
     padding:10rem 9% 10rem;
@@ -196,7 +259,9 @@ span{
     background: var(--bg-color);
 }
 .projects h2{
-    margin-bottom: 8rem;
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 4rem;
 }
 .projects-container{ 
     display: grid;
@@ -210,6 +275,15 @@ span{
     height: 550px;
     overflow: hidden;
     display: flex;
+}
+.projects-box a {
+    display: flex; /* Allow child elements to stack or align flexibly */
+    flex-direction: column; /* Ensure the image and text stack vertically */
+    width: 100%; /* Fill the entire project box */
+    height: 100%; /* Fill the entire project box */
+    text-decoration: none; /* Remove underline for links */
+    color: inherit; /* Use the same text color as the parent */
+    overflow: hidden; /* Prevent overflow from the image */
 }
 .projects-box img{
     width: 100%;
@@ -245,9 +319,9 @@ span{
     font-weight:800;
 }
 .projects-info p{
-    font-size: 1.6rem;
-    margin: 0.3rem 0 1rem; 
-    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 2rem 0 2rem; 
+    font-weight: 500;
     color: white;
 } 
 .projects-info a{
@@ -265,3 +339,369 @@ span{
     font-size: 3rem;
     color: var(--main-color)
 }
+.projects-info i {
+    font-size: 3rem; /* Restore the original size */
+    color: var(--main-color); /* Restore the color */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem; /* Match the original dimensions */
+    height: 5rem; /* Match the original dimensions */
+    border: 2px solid var(--main-color); /* Border around the icon */
+    border-radius: 50%; /* Circular shape */
+    background: white; /* Icon background */
+    transition: 0.3s ease; /* Smooth hover effect */
+}
+
+.projects-info i:hover {
+    transform: scale(1.2); /* Slight enlargement on hover */
+    background-color: var(--main-color); /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+.footer .social{ 
+    /*text-align: center; 
+    padding-bottom: 25px;
+    color:white;*/
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center items */
+    gap: 2em; /* Add spacing between each item */
+    text-align: center;
+}
+.footer .social h3 {
+    color: white;
+    margin: 0; /* Reset default margins */
+    margin-top: 8px; /* Bring the text downward to align with icons */
+    font-size: 1.2rem; /* Keep font size consistent */
+}
+.social-item {
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Center vertically */
+    gap: 0.5em; /* Spacing between icon and text */
+}
+
+.social-item h3 {
+    color: white;
+    margin: 0; /* Remove default margins */
+    margin-top: 5px; /* Adjust this value to align vertically */
+    font-size: 1.2rem; /* Adjust the font size if needed */
+    line-height: 1.2;
+}
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    height: 42px;
+    line-height: 42px; 
+    display: inline-block; 
+    text-align: center; 
+    border-radius: 50%;
+    margin: 0 10px; 
+    transition: 0.3s ease;
+}
+.footer social a:hover{
+    transform: scale(1.2) translateY(-10px); 
+    background-color: white;
+    color: var(--main-color);
+}
+/*
+.footer ul{ 
+    margin-top: 0;
+    padding: 15px; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{ 
+    border-bottom: 3px solid white;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+    */
+.footer .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+}
+@media(max-width: 1200px){
+    html{
+    font-size: 55%;
+    }
+    .projects-container{ 
+        padding-bottom: 7rem; 
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 5rem;
+    }
+}
+@media (max-width: 1000px){
+    header{ 
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{ 
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media (max-width: 955px){
+    #menu-icon{
+    display: block;
+    }
+    .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    width: 40%;
+    border-left: 3px solid var(--main-color); 
+    border-bottom: 3px solid var(--main-color); border-bottom-left-radius: 2em; 
+    padding: 1rem 3%;
+    background: var(--second-bg-color); 
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block; font-size: 2rem; margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column; margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{ 
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw; margin-top: 4rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .projects h2{
+        margin-bottom: 3rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding: 0; text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){ 
+        padding-left: 37px;
+    }
+    .timeline-dot{ 
+        left: 0;
+    }
+}
+
+/************ Prototype Page ************/
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Project Overview Section */
+
+.prototype-page section {
+    margin: 0;
+    padding: 3rem 9%;
+    min-height: auto;
+}
+
+.prototype-page .overview, .prototype-page .video, .prototype-page .description, .prototype-page .features, .prototype-page .takeaways, .prototype-page .links {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 0px;
+}
+
+.prototype-page .overview h2,
+.prototype-page .video h2,
+.prototype-page .description h2,
+.prototype-page .features h2,
+.prototype-page .takeaways h2,
+.prototype-page .links h2 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.prototype-page .overview p,
+.prototype-page .video iframe,
+.prototype-page .description p,
+.prototype-page .features p,
+.prototype-page .takeaways p,
+.prototype-page .links a {
+    font-size: 1.8rem;
+    line-height: 2.0;
+    color: var(--text-color);
+}
+.prototype-page .description h3 {
+    font-size: 2.0rem;
+    margin-top: 2rem;
+}
+.prototype-page .list {
+    font-size: 1.6rem; /* Match the paragraph font size */
+    line-height: 1.8; /* Ensure good readability */
+    color: var(--text-color); /* Use the same color as the paragraph text */
+    margin: 0; /* Reset default margins */
+    padding-left: 2rem; /* Add left padding for indentation */
+}
+
+.prototype-page .list li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+}
+
+.prototype-page .video iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 1rem;
+}
+
+/* Features Section */
+.features img{
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.features p{
+    margin-top: 1rem;
+}
+/* Slider Imag */
+.slider-container {
+    padding: 2rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 90rem; /* Make it responsive */
+    margin:0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio:16/9;
+    overflow-x:hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+    border-radius:0.5rem;
+}
+.slider img {
+    flex: 1 0 100%; /* Each image takes full width of the slider */
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.dots {
+    display:flex;
+    column-gap:2rem;
+    position:absolute;
+    bottom:0rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:1;
+}
+
+.dots a {
+    width:1rem;
+    height:1rem;
+    border-radius: 50%;
+    background-color:#fff;
+    opacity:0.75;
+    transition: opacity ease 250ms;
+}
+
+.dots a:hover{
+    background-color: var(--main-color);
+    transform: scale(1.2);
+    opacity:1;
+}
+
+/* Links Section */
+.links {
+    text-align: center;
+}
+
+.links a {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.links a:hover {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    transform: scale(1.2);
+}
+
