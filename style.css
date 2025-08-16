@@ -213,18 +213,22 @@ span{
 }
 @keyframes words{
     0%,
-    25%{
+    20%{
         content:'UI Designer';
     }
-    26%,
-    50%{
+    21%,
+    40%{
+        content:'Web Developer';
+    }
+    41%,
+    60%{
         content: 'Web Designer';
     }
-    51%,
-    75%{
+    61%,
+    80%{
         content: 'Game Developer';
     }
-    76%,
+    81%,
     100%{
         content: 'Game Designer';
     }
@@ -578,7 +582,7 @@ span{
 .prototype-page .links h2 {
     font-size: 3rem;
     color: var(--main-color);
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     text-align: left;
 }
 
@@ -600,7 +604,7 @@ span{
     font-size: 1.6rem; /* Match the paragraph font size */
     line-height: 1.8; /* Ensure good readability */
     color: var(--text-color); /* Use the same color as the paragraph text */
-    margin: 0; /* Reset default margins */
+    margin: 2rem 0; /* Reset default margins */
     padding-left: 2rem; /* Add left padding for indentation */
 }
 

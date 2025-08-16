@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0"><title>Game Design</title> <link rel="stylesheet" href="/style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head> 
+
+<body>
+    <!--Nav Bar-->
+    <header class="header">
+        <a href="index.html" class="logo" >Kimi
+        <span>Zhang</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html" >Home</a>
+            <!-- Dropdown Menu for Projects -->
+            <div class="dropdown">
+                <button class="dropbtn">Projects <i class="bx bx-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="prototyping.html">Web Prototyping</a>
+                    <a href="game.html">Game Design</a>
+                    <a href="web_dev.html">Web Development</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!--Hero Image-->
+    <section class="hero">
+        <img src="data/game_hero.png" alt="">
+        <div class="hero-text">
+            <p style="margin-top: 170px;">Website Development & Visualization Design Project</p>
+        </div>
+    </section>
+
+    <!--Overview-->
+    <main class="prototype-page">
+        <section class="overview">
+            <h2>Project Overview</h2>
+            <p><strong>Role:</strong> Game Designer, Programmer, UI/Asset Designer</p>
+            <p><strong>Collaborator:</strong> N/A - Individual Project</p>
+            <p><strong>Tools Used:</strong> <br> 
+                <ul class="list"><li>Eclipse</li><li>Java</li><li>Procreate</li></ul></p>
+            <p><strong>Duration:</strong> 1 Months (November 2023 - December 2023)</p>
+        </section>
+        <section class="video">
+            <h2>Project Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ArsOFyBL-SQ?si=9ORoTq0WWJXDueqC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section class="description">
+            <h2>Project Description</h2>
+            <p>Mega Veggie Mania was developed as part of <strong>IAT 265 Introduction to Game Design and Development</strong> at SFU's Interactive Arts and Technology program. This 2D first-person farming simulation game was programmed entirely in Java and designed to deliver an engaging, progressively challenging gameplay experience.</p>
+            <p>Through the creation of custom game mechanics, UI elements, and original visual assets, the project blends intuitive interaction with playful aesthetics. Level modules and progression systems were designed to guide players subtly while maintaining freedom of exploration, ensuring a balanced mix of structure and discovery.</p>
+            <h3>My Main Tasks in This Project:</h3>
+            <ul class="list">
+                <li>Game Mechanics & Level Design</li>
+                <li>UI & Visual Asset Creation</li>
+                <li>Gameplay Programming in Java</li>
+            </ul>
+        </section>
+        <section class="features">
+            <section class="slider-container">
+                <!--Wireframe & Userflow-->
+                <h2>Game Mechanics & Level Design</h2>
+                <img src="data/action_gif.gif" alt="Gif of interactive vis" />
+                <p>I designed core farming interactions such as planting, watering, pest control, and harvesting to create a natural gameplay loop that mirrors the experience of nurturing real plants. The aim was to not only entertain but also prepare players for the kinds of challenges they might face in real-life plant care — from maintaining optimal moisture to protecting crops from pests.</p>
+                <img src="data/seasonal change.gif" alt="User Flow Demo">
+                
+                <p>The level modules were built around seasonal and environmental variations, each introducing a new challenge as game time progresses:</p>
+                <ul class="list">
+                    <li>Summer: High heat causes plants to lose moisture faster, requiring more frequent watering.</li>
+                    <li>Fall: Heavy rainfall increases soil moisture, so players must protect plants from over-watering by placing umbrellas over them.</li>
+                    <li>Winter: Cold slows plant growth, shifting the focus to upkeep and preparation while waiting for the next growth spurt.</li>
+                    <li>Night: Insects appear and damage crops, prompting players to react quickly to protect them.</li>
+                </ul>
+                <p>Each challenge is introduced through a short, in-game note at the top left corner of the screen, briefly explaining the situation and giving hints on how to handle it. This gradual, time-based introduction ensures players are not overwhelmed early on, while still keeping gameplay fresh and engaging. The design encourages adaptive thinking and maintains interest by layering complexity over time, creating a satisfying learning curve.</p>
+            
+                <!--UI-->
+                <h2>UI & Visual Asset Creation</h2>
+                <img src="data/game_art.png" alt="Design Principle Demo">
+                <p>All UI elements and in-game visuals were designed for instant recognition while maintaining a consistent, friendly look. Assets were initially generated with ChatGPT, then refined in Procreate to ensure uniform color, line quality, and proportions. Icons, meters, and overlays were kept simple and clear so players can quickly assess crop health, water levels, and pest activity without interrupting their gameplay.</p>
+
+                <p>The overall art style follows a cute, hand-drawn approach with soft edges, bright colors, and playful proportions, aligning with the game's lighthearted farming theme. This style makes the experience approachable for casual players and lowers perceived difficulty, encouraging them to experiment and enjoy the process without feeling pressured.</p>
+
+                <!--Programming-->
+                <h2>Gameplay Programming in Java</h2>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="code1" src="data/code1.png" alt="Flow Image 1">
+                        <img id="code2" src="data/code2.png" alt="Flow Image 2">
+                        <img id="code3" src="data/code3.png" alt="Flow Image 3">
+                    </div>
+                    <div class="dots">
+                        <a href="#code1"></a>
+                        <a href="#code2"></a>
+                        <a href="#code3"></a>
+                    </div>
+                </div>
+                <img src="data/code.png" alt="Figma Prototype Flow">
+                <p>The game's core systems — from the main loop to input handling — were fully built in Java. Crop growth, weather effects, and player actions were tied to the same game rules so that every visual change, like faster growth after watering or damage from pests, directly matched what was happening in the underlying logic. Player actions always felt responsive, with results appearing immediately in the crops' condition. </p>
+
+                <p>Event triggers added variety and kept the game feeling alive. For example, pests appeared only under specific conditions, like certain growth stages or times of day. These reactive elements encouraged players to adapt their strategies over time and prevented the gameplay from becoming repetitive. </p>
+            </section>
+        </section>
+        <section class="takeaways">
+            <h2>Takeaways</h2>
+            <p>This project took me through the full process of making a game from scratch — from brainstorming the initial idea, mapping out player actions, and storyboarding the concept, to creating the visuals and programming the systems in Java. I learned how important it is to think about how mechanics, visuals, and feedback connect to keep players engaged and guided without overwhelming them. On the technical side, programming the entire game in Java strengthened my ability to structure systems, manage game states, and implement event-driven features that make the world feel dynamic. Building the game step-by-step taught me the value of introducing challenges gradually, keeping controls intuitive, and making sure every action feels meaningful. Seeing the idea grow into a fully playable game gave me a much deeper understanding of how creativity and technical execution come together in game design.
+                </p>
+        </section>
+        <section class="links">
+            <h2>Project Links</h2>
+            <a href="https://github.com/KimiYuxinZhang/IAT265-MEGA-VEGGIE-MANIA" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <i class="bx bx-link"></i>
+            </a>
+        </section>
+        
+    </main>
+    <!--Footer-->
+    <footer class="footer" id="contact">
+        <div class="social">
+            <a href="#"><i class='bx bxs-envelope'></i></a>
+            <h3>yza651@sfu.ca</h3>
+            <a href="#"><i class='bx bxs-phone'></i></a>
+            <h3>yza651@sfu.ca</h3>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <h3>yza651@sfu.ca</h3>
+        </div>
+        <p class="copyright">
+            © Kimi Zhang | All Rights Reserved
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
