@@ -530,11 +530,14 @@ span{
     text-align: center;
     margin-bottom: 3rem;
     padding: 0;
+    height: 100vh; /* Full height of viewport */
+    width: 100%;   /* Full width */
+    overflow: hidden; /* Prevent scrollbars if image overflows */
 }
 
 .hero img {
     width: 100%;
-    height: 700px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -638,23 +641,35 @@ span{
 
 .slider-wrapper {
     position: relative;
-    max-width: 90rem; /* Make it responsive */
+    max-width: 90rem; 
     margin:0 auto;
+    overflow: hidden; /* keep wrapper clipped */
 }
 
 .slider {
     display: flex;
     aspect-ratio:16/9;
-    overflow-x:hidden;
+    overflow-x:auto;                  /* <-- allow horizontal scroll */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
     border-radius:0.5rem;
+    /*animation: slider 30s ease-in-out infinite alternate fill-mode;*/
+    /* hide scrollbar (cross-browser) */
+    -ms-overflow-style: none;          /* IE/Edge */
+    scrollbar-width: none;             /* Firefox */
+}
+.slider::-webkit-scrollbar {           /* Chrome/Safari */
+    display: none;
 }
 .slider img {
-    flex: 1 0 100%; /* Each image takes full width of the slider */
+    flex: 1 0 100%; 
+    /*old
     scroll-snap-align: start;
-    object-fit: cover;
+    object-fit: cover;*/
+    width: 100%;
+    object-fit: contain; /* see the whole image; use 'cover' if you prefer cropping */
+    scroll-snap-align: center;
 }
 
 .dots {
@@ -673,7 +688,9 @@ span{
     border-radius: 50%;
     background-color:#fff;
     opacity:0.75;
-    transition: opacity ease 250ms;
+    /*old
+    transition: opacity ease 250ms;*/
+    transition: transform 250ms ease, background-color 250ms ease, opacity 250ms ease;
 }
 
 .dots a:hover{
@@ -681,6 +698,20 @@ span{
     transform: scale(1.2);
     opacity:1;
 }
+/*
+@keyframes slider{
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-200%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(0%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+}*/
 
 /* Links Section */
 .links {
@@ -709,3 +740,7 @@ span{
     transform: scale(1.2);
 }
 
+/*pls fix my slider issue*/
+:root { --header-h: 96px; }           /* header height; tweak if needed */
+html { scroll-padding-top: var(--header-h); }
+.slider img { scroll-margin-top: var(--header-h); }
