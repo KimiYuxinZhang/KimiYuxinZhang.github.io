@@ -23,5 +23,16 @@ menuIcon.onclick = () =>{
     navbar.classList.toggle('active');
 }
 
+const fill = document.getElementById('scrollFill');
+const label = document.getElementById('scrollLabel');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = Math.round((scrollTop / docHeight) * 100);
+
+  fill.style.height = progress + '%';
+  label.textContent = progress + '%';
+});
 
 
