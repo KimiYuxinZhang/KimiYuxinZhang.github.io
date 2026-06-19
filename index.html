@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</title> <link rel="stylesheet" href="style.css">
+content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</title> 
+<link rel="stylesheet" href="style.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head> 
@@ -11,8 +12,12 @@ content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</ti
 <body>
     <!--Nav Bar-->
     <header class="header">
-        <a href="#home" class="logo" >Kimi
-        <span>Zhang</span></a>
+        <div class="brand-group">
+            <img class="logo" src="img/icon.png" alt="Kimi Zhang logo">
+            <a href="#home" class="header-title" >Kimi
+            <span>Zhang</span></a>
+        </div>
+        
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -42,10 +47,73 @@ content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</ti
         </div>
     </section>
     <!--Project Section-->
+
+    <section id="project-section" aria-labelledby="projects-heading">
+            <p class="project-section-label">Portfolio</p>
+            <h2 id="projects-heading">Project</h2>
+            <div class="project-grid">
+                <article class="project-card" aria-label="Emergency Preparedness UX project">
+                    <a href="/prototyping.html" class="project-card-link">
+                        <img src="data/prototyping.png" alt="Screenshot of Emergency Preparedness project" loading="lazy" width="400" height="300">
+                        <div class="project-card-body">
+                            <h2>Web Design & Prototype</h2>
+                            <p class="project-description">Redesigning the UI for SUIGENKYO's website, transforming it from a traditional commercial site to a more engaging platform that enhances user interaction and storytelling.</p>
+                            <div class="project-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Photoshop</span>
+                                <span class="tag">Problem Framing</span>
+                            </div>
+                            <span class="body-link">Explore →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="project-card" aria-label="Steam Report project">
+                    <a href="/web_dev.html" class="project-card-link">
+                        <img 
+                            src="img/web-dev-hero-1-sm.jpg" 
+                            alt="Screenshot of Steam Report project" 
+                            loading="lazy"
+                            width="400" height="300">
+                        <div class="project-card-body">
+                            <h2>Steam Report</h2>
+                            <p class="project-description">An interactive website that transforms complex gaming industry data into a clear, user-driven visual experience.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">Vegalite</span>
+                                <span class="tag">D3</span>
+                                <span class="tag">Tableau</span>
+                            </div>
+                            <span class="body-link">Explore →</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="project-card" aria-label="Emergency Preparedness UX project">
+                    <a href="ux-project.html" class="project-card-link">
+                        <img src="img/ux-small.jpg" alt="Screenshot of Emergency Preparedness project" loading="lazy" width="400" height="300">
+                        <div class="project-card-body">
+                            <h2>Emergency Preparedness for Vancouver Tenants</h2>
+                            <p class="project-description">A research-driven design solution that uses culturally informed storytelling to motivate real behavior change in users.</p>
+                            <div class="project-tags">
+                                <span class="tag">Figma</span>
+                                <span class="tag">Secondary Research</span>
+                                <span class="tag">Problem Framing</span>
+                            </div>
+                            <span class="body-link">Explore →</span>
+                        </div>
+                    </a>
+                </article>
+                
+            </div>
+        </section>
+        
+        
+
+    <!--
     <section class="projects" id="projects">
         <h2 class="heading">Projects</h2>
         <div class="projects-container">
-            <!--Web Prototype Project-->
             <div class="projects-box">
                 <a href="/prototyping.html">
                     <img src="data/prototyping.png" alt="">
@@ -58,7 +126,6 @@ content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</ti
                 </a>
             </div>
         
-            <!--Web Design Project-->
             <div class="projects-box">
                 <a href="/web_dev.html">
                     <img src="data/web_dev.png" alt="">
@@ -70,7 +137,7 @@ content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</ti
                     </div>
                 </a>
             </div>
-            <!--Game Design Project-->
+     
             <div class="projects-box">
                 <a href="/game.html">
                     <img src="data/game_design.png" alt="">
@@ -84,6 +151,7 @@ content="width=device-width, initial-scale=1.0"><title>Kimi's Portfolio Page</ti
             </div>
         </div>
     </section>
+    -->
 
     <!--footer info-->
     <footer class="footer" id="contact">

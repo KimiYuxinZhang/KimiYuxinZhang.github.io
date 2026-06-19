@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UX Design - Emergency Preparedness</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <header class="header">
+        <div class="brand-group">
+            <img class="logo" src="img/icon.png" alt="Kimi Zhang logo">
+            <a href="#home" class="header-title" >Kimi
+            <span>Zhang</span></a>
+        </div>
+        
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html" >Home</a>
+            <!-- Dropdown Menu for Projects -->
+            <div class="dropdown">
+                <button class="dropbtn">Projects <i class="bx bx-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="prototyping.html">Web Prototyping</a>
+                    <a href="web_dev.html">Web Development</a>
+                    <a href="ux-project.html">UX Project</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!--Hero Image-->
+        <section class="hero">
+            <img src="img/ux-hero.png" alt="">
+            <div class="hero-text">
+                <h2>Emergency Preparedness <br> for Vancouver Tenants</h2>
+                <p>UX Research, Interaction Design & Communication Design</p>
+            </div>
+        </section>
+
+    <main class="prototype-page">
+        <!-- Scroll progress bar -->
+        <div class="scroll-progress-bar" role="progressbar" aria-label="Page scroll progress">
+            <div class="scroll-progress-fill" id="scrollFill"></div>
+            <span class="scroll-progress-label" id="scrollLabel">0%</span>
+        </div>
+
+         
+
+
+        <!-- Details group -->
+        <section class="project-highlights" aria-label="Project details">
+            <div class="highlight-col">
+                <h2>Tools Used</h2>
+                <p>Figma, Secondary Research, Problem Framing</p>
+                <a class="button-nav" href="https://www.figma.com/board/W9dA7yY9ONfaWFi7AMMgSL/JAMMIN-TIME?node-id=0-1&p=f&t=00bviNdUdz3JOVjz-0">View FigJam</a>
+            </div>
+            <div class="highlight-col">
+                <h2>Timeline</h2>
+                <p>3 weeks, completed March 2026</p>
+                <p>Collaborated in team of 5</p>
+            </div>
+            <div class="highlight-col">
+                <h2>My Role</h2>
+                <p>UX Designer & Researcher, Communication Designer</p>
+                <a class="button-nav" href="https://www.figma.com/design/wOWpV1TClUPlyCOpHgRBoq/Slidesssss?node-id=28-463&t=g9S6KETPi9YATJG0-0">View Slide Deck</a>
+            </div>
+        </section>
+
+
+        <!--Overview-->
+        <section class="description">
+            <h2>Context</h2>
+            <p>The project was developed for UX Design at SFU's School of Interactive Arts and Technology, a course that applies professional industry standards across interaction design, visual design, content strategy, and user interface design through client-based, research-grounded projects. Within the team, <span class="feature-text">my role focused on analyzing the brief, conducting secondary research, synthesizing insights, and leading the communication design through the presentation slide deck and user journey map.</span></p>
+            <br>
+            <h2>Project Overview</h2>
+            <p>This project was built around a real civic brief issued by the City of Vancouver, where tenants face unique emergency preparedness challenges because they cannot modify their living space without landlord permission. The goal was to <span class="feature-text">develop a means by which tenants could prepare their living space for emergencies on their own, focusing specifically on steps they could take around their home to mitigate or reduce hazards without requiring landlord approval.</span> My first responsibility was to analyze the brief carefully and identify what the actual design challenge was beneath the surface. The problem was not simply a lack of information, it was a lack of agency, and that distinction shaped every research decision I made afterward.</p>
+        </section>
+
+        <section class="features">
+            <section class="slider-container">
+                <!--Wireframe & Userflow-->
+                <h2>Finding Meaningful Insights</h2>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="wireframe1" src="img/ux-1.png" alt="Flow Image 1">
+                        <img id="wireframe2" src="img/ux-2.png" alt="Flow Image 2">
+                    </div>
+                    <div class="dots">
+                        <a href="#wireframe1" ></a>
+                        <a href="#wireframe2" ></a>
+                    </div>
+                </div>
+                <p>I conducted secondary research to build a deeper understanding of the social and psychological context around emergency preparedness. One of the most valuable insights I uncovered was that survivor stories are significantly more effective at motivating preparedness behavior than statistics alone, because they create a personal and emotional connection that raw data simply cannot replicate. This finding shifted how I thought about the problem. It was not enough to tell people what to do — the solution needed to make people feel why it mattered.</p>
+                
+                <!--UI-->
+                <h2>Shaping the Design Direction</h2>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="ui1" src="data/ui1.jpg" alt="UI Image 1">
+                        <img id="ui2"src="data/ui2.jpg" alt="UI Image 2">
+                        <img id="ui3"src="data/ui3.jpg" alt="UI Image 3">
+                    </div>
+                    <div class="dots">
+                        <a href="#ui1"></a>
+                        <a href="#ui2"></a>
+                        <a href="#ui3"></a>
+                    </div>
+                </div>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="prin1" src="img/ux-3.png" alt="Slide deck design showing our research question">
+                        <img id="prin1_2"src="img/ux-4.png" alt="Slide deck design showing how might we">
+                    </div>
+                    <div class="dots">
+                        <a href="#prin1"></a>
+                        <a href="#prin1_2"></a>
+                    </div>
+                </div>
+                <p>Bringing this insight to the team, we developed a design direction centered around a series of short-form videos inspired by Chinese cultural traditions, introducing preventative measures tenants could take to reduce hazards around their home without requiring any landlord permission. Narrowing our focus to a specific demographic allowed us to design with much greater intention and cultural sensitivity rather than producing something generic. </p>
+        
+                <!--Prototype-->
+                <h2>Communicating the Solution</h2>
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img id="solution1" src="img/ux-5.png" alt="Slide deck showing our design direction">
+                        <img id="solution2"src="img/ux-6.png" alt="Slide deck showing one of our research finding using visualizations">
+                    </div>
+                    <div class="dots">
+                        <a href="#solution1"></a>
+                        <a href="#solution2"></a>
+                    </div>
+                </div>
+                <p>My role then shifted toward communication design. I was responsible for designing the slide deck used to present our research findings, design rationale, and solution to our audience. I approached this the same way I approach any UX problem — by thinking carefully about who was receiving the information and what they needed to understand, and then structuring the content to guide them through it clearly and visually. </p>
+
+                <h2>Mapping the User Experience</h2>
+                <img src="img/ux-7.png" alt="User journey design" loading="lazy">
+                <p>I also designed a user journey map to illustrate how a tenant would discover, engage with, and respond to our video series. Mapping out the emotional highs and lows throughout that journey helped me articulate not only why our solution worked, but where future iterations could address remaining pain points. It reinforced something I continue to carry into every project: understanding how a person feels at each step of an experience is just as important as understanding what they do.</p>
+
+            </section>
+        </section>
+        <section class="takeaways">
+            <h2>Takeaways</h2>
+            <p>The strongest outcome of this project was not the final deliverable but the problem framing that preceded it. Identifying that the real barrier was motivation rather than information was what gave the design direction its clarity and purpose. It taught me that the quality of a solution is largely determined before any design work begins, and that asking better questions about what a problem actually is will always produce more meaningful results than jumping straight into execution.</p>
+        </section>
+
+        
+    </main>
+
+
+        <!-- Project Detail Section -->
+         <!--
+        <section class="featurette featurette-top" aria-labelledby="context-heading">
+        <div class="featurette-text">
+            <h2 id="context-heading">Context</h2>
+            <p>The project was developed for UX Design at SFU's School of Interactive Arts and Technology, a course that applies professional industry standards across interaction design, visual design, content strategy, and user interface design through client-based, research-grounded projects. Within the team, <span class="feature-text">my role focused on analyzing the brief, conducting secondary research, synthesizing insights, and leading the communication design through the presentation slide deck and user journey map.</span></p>
+        </div>
+        <div class="featurette-text">
+            <h2>Project Overview</h2>
+            <p>This project was built around a real civic brief issued by the City of Vancouver, where tenants face unique emergency preparedness challenges because they cannot modify their living space without landlord permission. The goal was to <span class="feature-text">develop a means by which tenants could prepare their living space for emergencies on their own, focusing specifically on steps they could take around their home to mitigate or reduce hazards without requiring landlord approval.</span> My first responsibility was to analyze the brief carefully and identify what the actual design challenge was beneath the surface. The problem was not simply a lack of information, it was a lack of agency, and that distinction shaped every research decision I made afterward.</p>
+        </div>
+        </section>
+        
+        <hr class="featurette-divider">
+
+        <section class="featurette" aria-labelledby="challenge-heading">
+        <div class="featurette-text">
+            <h2 id="challenge-heading">The Challenge</h2>
+            <p>The most significant challenge I encountered was conceptual. The brief framed the problem around a physical constraint, but working through the research kept bringing me back to question this assumption. The research pointed toward another dimension of the problem: if physical modification were suddenly permitted, would tenants actually prepare? The evidence suggested they largely would not. The real barrier was motivation. Most people do not feel personally at risk until something happens to someone close to them, which is why instructional content and statistics consistently fail to drive behavior change. <span class="feature-text">Reframing the problem around motivation rather than physical constraint was the turning point that gave our entire design direction its clarity and purpose.</span></p>
+        </div>
+        <div class="featurette-image">
+            <figure>
+                <img src="img/ux-0.png" alt="Cover image of the brief from City of Vancouver" loading="lazy">
+                <figcaption>Design brief issued by the City of Vancouver</figcaption>
+            </figure>
+        </div>
+        </section>
+
+        <hr class="featurette-divider">
+
+        <section class="featurette featurette-reverse">
+        <div class="featurette-text">
+            <h2>Finding Meaningful Insights. <span class="featurette-muted">Secondary Research & Key Findings</span></h2>
+            <p>I conducted secondary research to build a deeper understanding of the social and psychological context around emergency preparedness. One of the most valuable insights I uncovered was that survivor stories are significantly more effective at motivating preparedness behavior than statistics alone, because they create a personal and emotional connection that raw data simply cannot replicate. This finding shifted how I thought about the problem. It was not enough to tell people what to do — the solution needed to make people feel why it mattered.</p>
+        </div>
+        <div class="featurette-image">
+            <figure>
+                <img src="img/ux-1.png" alt="Screenshot of research insights I put together on FigJam" loading="lazy">
+                <figcaption>Research insights mapped on FigJam</figcaption>
+            </figure>
+            <figure>
+                <img src="img/ux-2.png" alt="Deck slide of key finding from secondary research" loading="lazy">
+                <figcaption>Key findings from secondary research</figcaption>
+            </figure>
+        </div>
+        </section>
+
+        <hr class="featurette-divider">
+
+        <section class="featurette">
+        <div class="featurette-text">
+            <h2>Shaping the Design Direction. <span class="featurette-muted">Concept Development & Demographic Focus.</span></h2>
+            <p>Bringing this insight to the team, we developed a design direction centered around a series of short-form videos inspired by Chinese cultural traditions, introducing preventative measures tenants could take to reduce hazards around their home without requiring any landlord permission. Narrowing our focus to a specific demographic allowed us to design with much greater intention and cultural sensitivity rather than producing something generic.</p>
+        </div>
+        <div class="featurette-image">
+            <figure>
+                <img src="img/ux-3.png" alt="Slide deck design showing our research question" loading="lazy">
+                <figcaption>Research question framing</figcaption>
+            </figure>
+            <figure>
+                <img src="img/ux-4.png" alt="Slide deck design showing how might we" loading="lazy">
+                <figcaption>How Might We ideation slide</figcaption>
+            </figure>
+        </div>
+        </section>
+
+        <hr class="featurette-divider">
+        
+        <section class="featurette featurette-reverse">
+        <div class="featurette-text">
+            <h2>Communicating the Solution. <span class="featurette-muted">Slide Deck & Presentation Design.</span></h2>
+            <p>My role then shifted toward communication design. I was responsible for designing the slide deck used to present our research findings, design rationale, and solution to our audience. I approached this the same way I approach any UX problem — by thinking carefully about who was receiving the information and what they needed to understand, and then structuring the content to guide them through it clearly and visually.</p>
+        </div>
+        <div class="featurette-image">
+            <figure>
+                <img src="img/ux-5.png" alt="Slide deck showing our design direction" loading="lazy">
+                <figcaption>Design direction presentation slide</figcaption>
+            </figure>
+            <figure>
+                <img src="img/ux-6.png" alt="Slide deck showing one of our research finding using visualizations" loading="lazy">
+                <figcaption>Research findings visualized in the deck</figcaption>
+            </figure>
+        </div>
+        </section>
+
+        <hr class="featurette-divider">
+        <section class="featurette">
+        <div class="featurette-text">
+            <h2>Mapping the User Experience. <span class="featurette-muted">User Journey Map.</span></h2>
+            <p>I also designed a user journey map to illustrate how a tenant would discover, engage with, and respond to our video series. Mapping out the emotional highs and lows throughout that journey helped me articulate not only why our solution worked, but where future iterations could address remaining pain points. It reinforced something I continue to carry into every project: understanding how a person feels at each step of an experience is just as important as understanding what they do.</p>
+        </div>
+        <div class="featurette-image">
+            <figure>
+                <img src="img/ux-7.png" alt="User journey design" loading="lazy">
+                <figcaption>User journey map showing emotional highs and lows</figcaption>
+            </figure>
+        </div>
+        </section>
+
+        <hr class="featurette-divider">
+        <section class="featurette">
+        <div class="featurette-text">
+            <h2>Took Away</h2>
+            <p>The strongest outcome of this project was not the final deliverable but the problem framing that preceded it. Identifying that the real barrier was motivation rather than information was what gave the design direction its clarity and purpose. It taught me that the quality of a solution is largely determined before any design work begins, and that asking better questions about what a problem actually is will always produce more meaningful results than jumping straight into execution.</p>
+        </div>
+        </section>
+    </main>
+-->
+    <!--Footer-->
+    <footer class="footer" id="contact">
+        <div class="social">
+            <a href="#"><i class='bx bxs-envelope'></i></a>
+            <h3>yza651@sfu.ca</h3>
+            <a href="#"><i class='bx bxs-phone'></i></a>
+            <h3>yza651@sfu.ca</h3>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <h3>yza651@sfu.ca</h3>
+        </div>
+        <p class="copyright">
+            © Kimi Zhang | All Rights Reserved
+        </p>
+    </footer>
+    <script src="script.js" defer></script>
+
+    
+</body>
+</html>

@@ -10,9 +10,13 @@ content="width=device-width, initial-scale=1.0"><title>Web Development</title> <
 
 <body>
     <!--Nav Bar-->
-    <header class="header">
-        <a href="index.html" class="logo" >Kimi
-        <span>Zhang</span></a>
+     <header class="header">
+        <div class="brand-group">
+            <img class="logo" src="img/icon.png" alt="Kimi Zhang logo">
+            <a href="#home" class="header-title" >Kimi
+            <span>Zhang</span></a>
+        </div>
+        
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
             <a href="index.html" >Home</a>
@@ -21,8 +25,8 @@ content="width=device-width, initial-scale=1.0"><title>Web Development</title> <
                 <button class="dropbtn">Projects <i class="bx bx-chevron-down"></i></button>
                 <div class="dropdown-content">
                     <a href="prototyping.html">Web Prototyping</a>
-                    <a href="game.html">Game Design</a>
                     <a href="web_dev.html">Web Development</a>
+                    <a href="ux-project.html">UX Project</a>
                 </div>
             </div>
             <a href="#contact">Contact</a>
@@ -31,7 +35,7 @@ content="width=device-width, initial-scale=1.0"><title>Web Development</title> <
 
     <!--Hero Image-->
     <section class="hero">
-        <img src="data/web_dev_hero.jpg" alt="">
+        <img src="img/web-dev-hero.jpg" alt="">
         <div class="hero-text">
             <h2>2024 Steam Report</h2>
             <p>Website Development & Visualization Design Project</p>
@@ -40,14 +44,27 @@ content="width=device-width, initial-scale=1.0"><title>Web Development</title> <
 
     <!--Overview-->
     <main class="prototype-page">
-        <section class="overview">
-            <h2>Project Overview</h2>
-            <p><strong>Role:</strong> Data Analyst, Data Visualization Designer, UX/UI Designer</p>
-            <p><strong>Collaborator:</strong> <br> Zilin Zhang - Data Analyst, Website Designer/Developer, Information Designer </p>
-            <p><strong>Tools Used:</strong> <br> 
-                <ul class="list"><li>HTML/CSS</li><li>Vegalite</li><li>D3</li><li>Tableau</li></ul></p>
-            <p><strong>Duration:</strong> 1 Month (November 2024 - December 2024)</p>
+         <!-- Details group -->
+        <section class="project-highlights" aria-label="Project details">
+            <div class="highlight-col">
+                <h2>Tools Used</h2>
+                <p>HTML/CSS, Vegalite, <br>Tableau, D3</p>
+            </div>
+            <div class="highlight-col">
+                <h2>Timeline</h2>
+                <p>4 weeks, completed December 2024</p>
+                <p>Collaborated with a Partner - Zilin Zhang (Data Analyst, Website Designer/Developer)</p>
+            </div>
+            <div class="highlight-col">
+                <h2>My Role</h2>
+                <p>Data Analyst, Data Visualization Designer, <br> Designer</p>
+                <a class="button-nav" href="https://kimi-gingercat.github.io/steam.html" 
+               target="_blank" 
+               rel="noopener noreferrer">View Website
+            </a>
+            </div>
         </section>
+
         <section class="description">
             <h2>Project Description</h2>
             <p>The Gaming Industry Visual Analysis website was developed for <strong>IAT 355 Introduction to Visual Analytics</strong> at SFU's 
@@ -91,14 +108,6 @@ content="width=device-width, initial-scale=1.0"><title>Web Development</title> <
             <p>Working on this project strengthened my skills in creating interactive, data-driven experiences and deepened my understanding of how to present complex information in an accessible way. I became more proficient with D3.js, Vega-Lite, and JavaScript for interactive visualizations, as well as with Figma for planning layouts that anticipate user interaction.
 
             The project reinforced the importance of progressive information delivery and thoughtful visual hierarchy, both of which improve comprehension and user engagement. I also gained valuable experience balancing technical implementation with design considerations, ensuring that every feature served the purpose of making the dataset clear, engaging, and easy to explore.</p>
-        </section>
-        <section class="links">
-            <h2>Project Links</h2>
-            <a href="https://kimi-gingercat.github.io/steam.html" 
-               target="_blank" 
-               rel="noopener noreferrer">
-                <i class="bx bx-link"></i>
-            </a>
         </section>
         
     </main>

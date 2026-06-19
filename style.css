@@ -11,7 +11,13 @@
     --bg-color:rgb(12, 12, 12);
     --second-bg-color:#161616;
     --text-color:white;
-    --main-color:#e415ff;
+    --main-color:rgb(231, 85, 148);
+    --color-bg-cream: rgb(255, 254, 237);
+    --color-dust-rose: rgb(183, 94, 116);
+    --color-sec-rose: rgb(254, 162, 185);
+    --color-black: rgb(45, 43, 43);
+    --color-hot-pink: rgb(255, 61, 119);
+    --color-hot-pink-rgb: 255, 61, 119;
 }
 html{
     font-size:62.5%;
@@ -31,14 +37,40 @@ body{
     display: flex; justify-content: space-between;
     align-items: center; z-index: 100;
 }
-.logo{
-    font-size:3rem;
-    color: var(--text-color); font-weight: 800; cursor: pointer;
+.brand-group {
+    display: flex;
+    flex-shrink: 0;
     transition: 0.3s ease;
 }
-.logo:hover{
+.brand-group:hover{
     transform: scale(1.1);
 }
+.title {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    align-self: center;
+    font-family: 'title-font', sans-serif;
+    color: var(--color-main);
+}
+.logo {
+    height: 3.5rem;          
+    width: auto;
+}
+/* samller nav bar when window size too small */
+@media (max-width: 700px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .logo{
+        height:1.5rem;
+    }
+}
+.header-title{
+    font-size:3rem;
+    color: var(--text-color); font-weight: 800; cursor: pointer;
+}
+
 .navbar a{
     font-size:1.8rem;
     color: white;
@@ -258,7 +290,182 @@ span{
         width: calc(100% + 8px);
     }
 }
+/*Project section*/
+#project-section {
+  padding: 4rem 3rem;
+  text-align: center;
+}
+.project-section-label {
+  font-size: 1.85rem;
+  letter-spacing: 1.2rem;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 1.9rem;
+}
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+  color:var(--color-sec-rose);;
+}
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+/****Project card****/
+.project-card {
+    position: relative;
+    width: 30rem;
+    border: 1px solid rgba(var(--color-hot-pink-rgb), 0.4);
+    border-radius: 1rem 4rem 1rem 1rem;
+    overflow: hidden; 
+    background: transparent;
+    transition: border-radius 0.4s ease;
+}
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(45deg, var(--color-sec-rose) 50%, transparent 70%);
+    border-radius: 0 0 0 0.5rem;
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: 1;
+}
+.project-card:hover {
+    border-radius: 1rem;             
+}
+.project-card:hover::before {
+    width: 0;
+    height: 0;
+}
+.project-card-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+.project-card-link img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    display: block;
+}
+.project-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.project-card-body .body-link {
+    margin-top: auto;
+    font-size:1.3rem;
+}
+.project-card-body h2 {
+    margin: 0 0 0.5rem 0;
+}
+.project-description {
+    font-size: 1.3rem;
+    color: #aaa;
+    margin-bottom: 1rem;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.7rem;
+}
 
+.tag {
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 2rem;
+    background-color: var(--color-sec-rose);
+    color:white;
+}
+.project-image-link img{
+    width:40%;
+    height: 30rem;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.project-image-link:hover img,
+.project-image-link:focus img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+/******** project highlights component *******/
+.project-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 4rem 3rem;
+  text-align: center;
+}
+.highlight-col {
+  flex: 1 1 15rem;
+  max-width: 35rem;
+}
+.highlight-col img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.highlight-col h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.highlight-col p {
+  font-size: 1.5rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+/***** Styling for the navigation button *****/
+.button-nav {
+    display: inline-block; 
+    position: relative;
+    color: var(--color-hot-pink);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(132deg, var(--color-hot-pink) 0%, rgba(255,138,194,1) 49%, rgba(237,160,83,1) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    overflow: hidden;
+    transition: color 0.8s ease;
+    z-index: 0;
+}
+.button-nav::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(132deg, var(--color-hot-pink) 0%, rgba(255,138,194,1) 49%, rgba(237,160,83,1) 100%);     
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    border-radius: 0.9rem;     
+}
+.button-nav:hover,
+.button-nav:focus {
+    color: white;
+}
+.button-nav:hover::before,
+.button-nav:focus::before {
+    transform: scaleX(1);
+    transition: transform 1.3s ease;
+}
+
+/*old project style*/
+/*
 .projects{
     background: var(--bg-color);
 }
@@ -281,13 +488,13 @@ span{
     display: flex;
 }
 .projects-box a {
-    display: flex; /* Allow child elements to stack or align flexibly */
-    flex-direction: column; /* Ensure the image and text stack vertically */
-    width: 100%; /* Fill the entire project box */
-    height: 100%; /* Fill the entire project box */
-    text-decoration: none; /* Remove underline for links */
-    color: inherit; /* Use the same text color as the parent */
-    overflow: hidden; /* Prevent overflow from the image */
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    height: 100%; 
+    text-decoration: none; 
+    color: inherit;
+    overflow: hidden; 
 }
 .projects-box img{
     width: 100%;
@@ -344,25 +551,25 @@ span{
     color: var(--main-color)
 }
 .projects-info i {
-    font-size: 3rem; /* Restore the original size */
-    color: var(--main-color); /* Restore the color */
+    font-size: 3rem; 
+    color: var(--main-color); 
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem; /* Match the original dimensions */
-    height: 5rem; /* Match the original dimensions */
-    border: 2px solid var(--main-color); /* Border around the icon */
-    border-radius: 50%; /* Circular shape */
-    background: white; /* Icon background */
-    transition: 0.3s ease; /* Smooth hover effect */
+    width: 5rem; 
+    height: 5rem; 
+    border: 2px solid var(--main-color); 
+    border-radius: 50%;
+    background: white; 
+    transition: 0.3s ease; 
 }
 
 .projects-info i:hover {
-    transform: scale(1.2); /* Slight enlargement on hover */
-    background-color: var(--main-color); /* Background color on hover */
-    color: white; /* Text color on hover */
+    transform: scale(1.2); 
+    background-color: var(--main-color); 
+    color: white;
 }
-
+*/
 .footer{
     position: relative;
     bottom: 0;
